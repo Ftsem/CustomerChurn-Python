@@ -27,46 +27,53 @@ The dataset contains the following key features:
 
 The first step was to analyze the distribution of key variables in the dataset:
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/fdc5c8933b444c99139aed54837fc3845deca096/Assets/Screenshot%202025-04-10%20110147.png)
-- **Churn**: The target variable was highly imbalanced. There were 5174 customers who did not churn (No), and 1869 customers who churned (Yes). This imbalance needed to be addressed in the modeling phase.
+#### Observations
+The Churn column is imbalanced, with 5174 non-churned customers and only 1869 churned customers. This indicates that the company has a higher retention rate, but the imbalance should be taken into account during model training.
+
+### 2. ** Visualizing Numerical Features Distribution**
+![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20110157.png)
+#### Observations
+Tenure: The distribution of tenure shows that most customers have been with the company for a relatively short period (less than 20 months). This suggests a significant portion of customers have only recently started using the service, which might be a risk for churn.
+
+Monthly Charges: There’s a moderate spread in monthly charges, with a concentration in the mid-range ($20 to $80).
+
+Total Charges: The TotalCharges feature has a skewed distribution, with the majority of customers having paid lower total charges, possibly indicating that newer customers tend to churn before accumulating higher charges.
+
+### 3. ** Churn vs Numerical Features **
+![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20110205.png)
+#### Observations
+Churn vs Tenure: Customers who churn tend to have shorter tenures. The median tenure for churned customers is significantly lower compared to non-churned customers, which suggests that new customers have a higher likelihood of churning.
+
+Churn vs Monthly Charges: There’s a notable difference in the distribution of monthly charges between churned and non-churned customers. Customers who churn tend to have slightly higher monthly charges. This could imply that customers on more expensive plans are either dissatisfied or financially constrained.
+
+Churn vs Total Charges: Similar to the tenure variable, churned customers have lower total charges, further confirming that new customers (with lower charges) are more likely to churn.
+
+### 4. **  Churn vs Categorical Features **
+![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20110221.png)
+#### Observations
+Churn vs Contract: Customers on Month-to-month contracts exhibit the highest churn rate, while customers on longer-term contracts (One year, Two year) have a significantly lower churn rate. This suggests that the company might retain customers better when they commit to longer-term contracts.
+
+Churn vs PaymentMethod: The Electronic check payment method is associated with higher churn rates, which may indicate that customers using this payment method have issues with service or billing.
+
+Churn vs Partner and Dependents: Customers without a Partner or Dependents tend to churn more. This might indicate that those who are part of a family or household are more likely to stay as they have a higher level of commitment to the service.
+
+### 5. ** Feature Importance using Random Forests **
+![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20120551.png)
+#### Observations
+The Contract, Tenure, and Monthly Charges features had the most significant importance in predicting customer churn, as expected based on the EDA. These are the features that the model would rely on the most when making predictions.
 
 
-- **Numerical Variables**: Features such as **tenure**, **MonthlyCharges**, and **TotalCharges** were explored.
-    - **Tenure**: Customers with short tenures seemed to be more likely to churn.
-    - **MonthlyCharges**: Higher charges were associated with a higher likelihood of churn.
-    - **TotalCharges**: Correlated with tenure, suggesting that longer-tenured customers tended to have higher total charges.
+### 6. ** Correlation Matrixs **
+![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20120543.png)
+#### Observations
 
-![](https://github.com/Ftsem/CustomerChurn-Python/blob/e90436502e39ea7ad5f50dee2bd1a1cd60582e19/Assets/Screenshot%202025-04-10%20110157.png)
+Tenure and Total Charges: These two features have a positive correlation, which makes sense because customers who have been with the company longer are likely to have paid more overall.
 
-### 2. **Univariate Analysis**
+Monthly Charges and Churn: There’s a moderate negative correlation between MonthlyCharges and Churn. This suggests that higher monthly charges might correlate with a higher likelihood of churn, especially for customers who are dissatisfied with the cost or value they are receiving.
 
-The distributions of **MonthlyCharges**, **TotalCharges**, and **Tenure** were visualized to understand their behavior. I also visualized the **Churn** distribution.
 
-For categorical variables, I examined the counts of each category (e.g., **Contract** type, **PaymentMethod**, **Partner** status) to understand their relationship to churn.
 
-![](https://github.com/Ftsem/CustomerChurn-Python/blob/290ee2dbbdcafce4060f152d5839a2469def3521/Assets/Screenshot%202025-04-10%20110205.png)
-### 3. **Bivariate Analysis: Churn vs. Key Features**
 
-I explored how different features related to churn:
-
-- **Churn vs. Tenure**: Customers who churned tended to have shorter tenures.
-- **Churn vs. Monthly Charges**: Churned customers typically had higher monthly charges.
-- **Churn vs. Total Charges**: Churned customers had lower total charges, suggesting shorter tenures.
-
-#### Visualizing Churn by Contract, Payment Method, Partner, and Dependents:
-
-![Churn vs. Contract](https://github.com/Ftsem/CustomerChurn-Python/blob/ec67d584d71fea58cda05212593ff245a4fbfd3d/Assets/Screenshot%202025-04-10%20110221.png)
-
-The images above show how different features such as **Contract** type, **PaymentMethod**, **Partner**, and **Dependents** affect churn rates.
-
-### 4. **Correlation and Feature Importance**
-
-To better understand which features had the strongest relationship with churn, I calculated the correlation matrix for the numerical features and visualized it using heatmaps. The correlations helped pinpoint which features were most closely linked to churn.
-
-Some notable correlations:
-- **Tenure** and **Total Charges** were positively correlated, indicating that customers with longer tenures tend to have higher total charges.
-- **Monthly Charges** had a moderate correlation with churn, with higher charges being linked to a higher likelihood of churn.
-
-Feature importance was also explored using tree-based models, which helped identify which features were the most important predictors of churn.
 
 ## Insights and Recommendations
 

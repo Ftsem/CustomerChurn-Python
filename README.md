@@ -29,7 +29,7 @@ The first step was to analyze the distribution of key variables in the dataset:
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/fdc5c8933b444c99139aed54837fc3845deca096/Assets/Screenshot%202025-04-10%20110147.png)
 ### Observations
 The Churn column is imbalanced, with 5174 non-churned customers and only 1869 churned customers. This indicates that the company has a higher retention rate, but the imbalance should be taken into account during model training.
-
+***
 ### 2. ** Visualizing Numerical Features Distribution**
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20110157.png)
 ### Observations

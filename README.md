@@ -33,7 +33,7 @@ The Churn column is imbalanced, with 5174 non-churned customers and only 1869 ch
 ### 2.  Visualizing Numerical Features Distribution
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20110157.png)
 ### Observations
-Tenure: The distribution of tenure shows that most customers have been with the company for a relatively short period (less than 20 months). This suggests a significant portion of customers have only recently started using the service, which might be a risk for churn.
+**Tenure**: The distribution of tenure shows that most customers have been with the company for a relatively short period (less than 20 months). This suggests a significant portion of customers have only recently started using the service, which might be a risk for churn.
 
 Monthly Charges: There’s a moderate spread in monthly charges, with a concentration in the mid-range ($20 to $80).
 

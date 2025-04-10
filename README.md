@@ -43,7 +43,7 @@ The distributions of **MonthlyCharges**, **TotalCharges**, and **Tenure** were v
 
 For categorical variables, I examined the counts of each category (e.g., **Contract** type, **PaymentMethod**, **Partner** status) to understand their relationship to churn.
 
-!([]https://github.com/Ftsem/CustomerChurn-Python/blob/290ee2dbbdcafce4060f152d5839a2469def3521/Assets/Screenshot%202025-04-10%20110205.png)
+![](https://github.com/Ftsem/CustomerChurn-Python/blob/290ee2dbbdcafce4060f152d5839a2469def3521/Assets/Screenshot%202025-04-10%20110205.png)
 ### 3. **Bivariate Analysis: Churn vs. Key Features**
 
 I explored how different features related to churn:
@@ -54,7 +54,7 @@ I explored how different features related to churn:
 
 #### Visualizing Churn by Contract, Payment Method, Partner, and Dependents:
 
-![Churn vs. Contract](path_to_image/Churn_vs_Contract.png)
+![Churn vs. Contract](https://github.com/Ftsem/CustomerChurn-Python/blob/ec67d584d71fea58cda05212593ff245a4fbfd3d/Assets/Screenshot%202025-04-10%20110221.png)
 
 The images above show how different features such as **Contract** type, **PaymentMethod**, **Partner**, and **Dependents** affect churn rates.
 

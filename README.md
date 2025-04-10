@@ -28,24 +28,22 @@ The dataset contains the following key features:
 The first step was to analyze the distribution of key variables in the dataset:
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/fdc5c8933b444c99139aed54837fc3845deca096/Assets/Screenshot%202025-04-10%20110147.png)
 - **Churn**: The target variable was highly imbalanced. There were 5174 customers who did not churn (No), and 1869 customers who churned (Yes). This imbalance needed to be addressed in the modeling phase.
-<!br>
+
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/e90436502e39ea7ad5f50dee2bd1a1cd60582e19/Assets/Screenshot%202025-04-10%20110157.png)
 - **Numerical Variables**: Features such as **tenure**, **MonthlyCharges**, and **TotalCharges** were explored.
     - **Tenure**: Customers with short tenures seemed to be more likely to churn.
     - **MonthlyCharges**: Higher charges were associated with a higher likelihood of churn.
     - **TotalCharges**: Correlated with tenure, suggesting that longer-tenured customers tended to have higher total charges.
 
-### 2. **Data Cleaning**
 
-I checked the dataset for missing values and confirmed there were no missing data points. Additionally, I ensured that **TotalCharges** was numeric and handled any invalid entries.
 
-### 3. **Univariate Analysis**
+### 2. **Univariate Analysis**
 
 The distributions of **MonthlyCharges**, **TotalCharges**, and **Tenure** were visualized to understand their behavior. I also visualized the **Churn** distribution.
 
 For categorical variables, I examined the counts of each category (e.g., **Contract** type, **PaymentMethod**, **Partner** status) to understand their relationship to churn.
 
-### 4. **Bivariate Analysis: Churn vs. Key Features**
+### 3. **Bivariate Analysis: Churn vs. Key Features**
 
 I explored how different features related to churn:
 
@@ -59,7 +57,7 @@ I explored how different features related to churn:
 
 The images above show how different features such as **Contract** type, **PaymentMethod**, **Partner**, and **Dependents** affect churn rates.
 
-### 5. **Correlation and Feature Importance**
+### 4. **Correlation and Feature Importance**
 
 To better understand which features had the strongest relationship with churn, I calculated the correlation matrix for the numerical features and visualized it using heatmaps. The correlations helped pinpoint which features were most closely linked to churn.
 

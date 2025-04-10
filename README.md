@@ -61,8 +61,7 @@ The Churn column is imbalanced, with 5174 non-churned customers and only 1869 ch
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20120551.png)
 ### Observations
 The Contract, Tenure, and Monthly Charges features had the most significant importance in predicting customer churn, as expected based on the EDA. These are the features that the model would rely on the most when making predictions.
-
-
+***
 ### 6. Correlation Matrixs 
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/81e8068283040ea5b9746226d637ea19abf2fff3/Assets/Screenshot%202025-04-10%20120543.png)
 #### Observations

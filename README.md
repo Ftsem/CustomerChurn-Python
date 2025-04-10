@@ -29,13 +29,13 @@ The first step was to analyze the distribution of key variables in the dataset:
 ![](https://github.com/Ftsem/CustomerChurn-Python/blob/fdc5c8933b444c99139aed54837fc3845deca096/Assets/Screenshot%202025-04-10%20110147.png)
 - **Churn**: The target variable was highly imbalanced. There were 5174 customers who did not churn (No), and 1869 customers who churned (Yes). This imbalance needed to be addressed in the modeling phase.
 
-![](https://github.com/Ftsem/CustomerChurn-Python/blob/e90436502e39ea7ad5f50dee2bd1a1cd60582e19/Assets/Screenshot%202025-04-10%20110157.png)
+
 - **Numerical Variables**: Features such as **tenure**, **MonthlyCharges**, and **TotalCharges** were explored.
     - **Tenure**: Customers with short tenures seemed to be more likely to churn.
     - **MonthlyCharges**: Higher charges were associated with a higher likelihood of churn.
     - **TotalCharges**: Correlated with tenure, suggesting that longer-tenured customers tended to have higher total charges.
 
-
+![](https://github.com/Ftsem/CustomerChurn-Python/blob/e90436502e39ea7ad5f50dee2bd1a1cd60582e19/Assets/Screenshot%202025-04-10%20110157.png)
 
 ### 2. **Univariate Analysis**
 
